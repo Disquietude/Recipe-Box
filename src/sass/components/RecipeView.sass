@@ -1,0 +1,68 @@
+@import "./colors"
+$lato: lato, sans-serif
+  
+.recipe-view
+  background-color: $green
+  padding: 5rem 0 5rem 0
+  color: white
+  display: flex
+  align-items: center
+  justify-content: center
+
+.recipe-view__card
+  width: 90%
+  height: 100%
+  border: 15px solid $dark-green
+  border-radius: 15px
+  display: grid
+  grid-auto-rows: 5rem 1fr
+
+.recipe-view__header
+  background-color: $dark-green
+  display: flex
+  align-items: center
+  padding: 0 10px 0 10px
+
+.recipe-view__name
+  font-family: $lato
+  font-size: 2rem
+  margin-right: 10px
+
+.recipe-view__edit-name
+  background-color: inherit
+  border: none
+  outline: none
+  color: $light-green
+  transition: 0.3s
+  &:hover
+    cursor: pointer
+    color: $red
+  &:active
+    transform: translateY(5px)
+
+.recipe-view__contents
+  background-color: white
+  font-family: $lato
+  color: black
+  padding: 10px
+
+.recipe-view__contents-header
+  font-size: 1.5rem
+
+.recipe-view__list
+  margin: 1rem 0 2rem 0
+  padding-left: 40px
+  font-size: 1.2rem
+
+.recipe-view__list--bullets
+  list-style-type: disc
+
+.recipe-view__list--numbered
+  list-style-type: decimal
+
+.recipe-view__list-item
+  margin-top: 0.5rem
+
+.recipe-view__list-item-contents
+  margin-left: 10px
+  

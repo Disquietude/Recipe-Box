@@ -1,0 +1,49 @@
+@import "./colors"
+$lato: lato, sans-serif
+  
+.recipe-index
+  color: white
+  background-color: $dark-green
+  display: grid
+  grid-template-rows: 5rem 1fr 5rem
+  justify-items: center
+  align-items: center
+
+.recipe-index__list
+  background-color: white
+  height: 100%
+  width: 90%
+
+.recipe-index__list-item
+  color: black
+  font-family: $lato
+  font-size: 1.1rem
+  padding: 0.5rem 5px 0.5rem 5px
+  line-height: 1.5
+  transition: 0.3s
+  &:nth-child(odd)
+    background-color: $light-blue
+  &:hover
+    cursor: pointer
+    background-color: $grey
+
+.recipe-index__controls
+  width: 90%
+  display: flex
+  flex-direction: row-reverse
+
+.recipe-index__button
+  height: 3rem
+  width: 3rem
+  background-color: $dark-green
+  color: $light-green
+  border: 3px solid $light-green
+  border-radius: 5px
+  margin-left: 5px
+  transition: 0.3s
+  &:hover
+    color: $red
+    border-color: $red
+    cursor: pointer
+  &:active
+    transform: translateY(5px)
