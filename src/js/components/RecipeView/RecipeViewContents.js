@@ -1,5 +1,6 @@
 import React from 'react';
 import RecipeViewListItem from "./RecipeViewListItem";
+import RecipeViewAddItem from "./RecipeViewAddItem";
 import DEFAULT_RECIPES from '../defaultRecipes';
 
 export default class RecipeViewContents extends React.Component {
@@ -15,10 +16,12 @@ export default class RecipeViewContents extends React.Component {
         <ul className="recipe-view__list recipe-view__list--bullets">
           {ingredients}
         </ul>
+        <RecipeViewAddItem type="ingredients"/>
         <h2 className="recipe-view__contents-header">Directions:</h2>
         <ol className="recipe-view__list recipe-view__list--numbered">
           {directions}
         </ol>
+        <RecipeViewAddItem type="directions"/>
       </div>
     );
   }

@@ -50,7 +50,7 @@ $lato: lato, sans-serif
   font-size: 1.5rem
 
 .recipe-view__list
-  margin: 1rem 0 2rem 0
+  margin-top: 1rem
   padding-left: 40px
   font-size: 1.2rem
 
@@ -66,3 +66,22 @@ $lato: lato, sans-serif
 .recipe-view__list-item-contents
   margin-left: 10px
   
+.recipe-view__add-list-item-button
+  display: flex
+  align-items: center
+  margin: 0.5rem 0 2rem 9px
+  font-size: 1.2rem
+  font-family: $lato
+  border: none
+  background-color: inherit
+  color: $green
+  outline: none
+  transition: 0.3s
+  & p 
+    margin-left: 18px
+  &:hover
+    color: $red
+    border-color: $red
+    cursor: pointer
+  &:active
+    transform: translateY(5px)
