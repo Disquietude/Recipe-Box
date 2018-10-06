@@ -9,7 +9,7 @@ export default class RecipeViewHeader extends React.Component {
     return (
       <div className="recipe-view__header">
         <h1 className="recipe-view__name">Recipe View</h1>
-        <button className="recipe-view__edit-name">
+        <button className="recipe-view__edit-name" title="Edit name">
           <FontAwesomeIcon icon="pen" size="2x"/>
         </button>
       </div>

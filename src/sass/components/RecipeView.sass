@@ -1,4 +1,5 @@
 @import "./colors"
+@import "./button"
 $lato: lato, sans-serif
   
 .recipe-view
@@ -15,7 +16,7 @@ $lato: lato, sans-serif
   border: 15px solid $dark-green
   border-radius: 15px
   display: grid
-  grid-auto-rows: 5rem 1fr
+  grid-template-rows: 5rem 1fr
 
 .recipe-view__header
   background-color: $dark-green
@@ -29,16 +30,8 @@ $lato: lato, sans-serif
   margin-right: 10px
 
 .recipe-view__edit-name
-  background-color: inherit
-  border: none
-  outline: none
+  @extend .button--no-border
   color: $light-green
-  transition: 0.3s
-  &:hover
-    cursor: pointer
-    color: $red
-  &:active
-    transform: translateY(5px)
 
 .recipe-view__contents
   background-color: white
@@ -65,23 +58,21 @@ $lato: lato, sans-serif
 
 .recipe-view__list-item-contents
   margin-left: 10px
-  
+  display: flex
+  & p 
+    margin-right: 5px
+
+.recipe-view__list-item-button
+  @extend .button--no-border
+  color: $grey
+
 .recipe-view__add-list-item-button
+  @extend .button--no-border
   display: flex
   align-items: center
   margin: 0.5rem 0 2rem 9px
   font-size: 1.2rem
   font-family: $lato
-  border: none
-  background-color: inherit
   color: $green
-  outline: none
-  transition: 0.3s
   & p 
     margin-left: 18px
-  &:hover
-    color: $red
-    border-color: $red
-    cursor: pointer
-  &:active
-    transform: translateY(5px)

@@ -1,4 +1,5 @@
 @import "./colors"
+@import "./button"
 $lato: lato, sans-serif
   
 .recipe-index
@@ -33,17 +34,13 @@ $lato: lato, sans-serif
   flex-direction: row-reverse
 
 .recipe-index__button
+  @extend .button
   height: 3rem
   width: 3rem
+  border: 3px solid $light-green
   background-color: $dark-green
   color: $light-green
-  border: 3px solid $light-green
   border-radius: 5px
   margin-left: 5px
-  transition: 0.3s
   &:hover
-    color: $red
     border-color: $red
-    cursor: pointer
-  &:active
-    transform: translateY(5px)

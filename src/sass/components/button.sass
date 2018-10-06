@@ -1,0 +1,14 @@
+.button
+  background-color: inherit
+  transition: 0.3s
+  &:hover
+    color: $red
+    border-color: $red
+    cursor: pointer
+  &:active
+    transform: translateY(5px)
+
+.button--no-border
+  @extend .button
+  border: none
+  outline: none
