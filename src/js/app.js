@@ -7,6 +7,4 @@ import { faPlus, faTrash, faPen } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faPlus, faTrash, faPen);
 
-require("../sass/styles.sass");
-
 ReactDOM.render(<AppContainer />, document.getElementById("app"));
