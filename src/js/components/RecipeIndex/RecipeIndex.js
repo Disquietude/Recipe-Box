@@ -9,9 +9,7 @@ export default class RecipeIndex extends React.Component {
   render() {
     return(
       <div className="recipe-index">
-        <div className="recipe-index__header-wrapper">
-          <h1 className="header">Recipe Index</h1>
-        </div> 
+        <h1 className="recipe-index__title">Recipe Box</h1>
         <RecipeIndexList />
         <RecipeIndexControls />
       </div>

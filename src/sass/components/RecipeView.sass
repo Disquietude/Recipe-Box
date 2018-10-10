@@ -1,32 +1,21 @@
-@import "./colors"
-@import "./button"
-$lato: lato, sans-serif
-  
 .recipe-view
   background-color: $green
   padding: 5rem 0 5rem 0
-  color: white
   display: flex
   align-items: center
   justify-content: center
 
 .recipe-view__card
+  @extend .card
+  grid-template-rows: 5rem 1fr
   width: 90%
   height: 100%
-  border: 15px solid $dark-green
-  border-radius: 15px
-  display: grid
-  grid-template-rows: 5rem 1fr
 
 .recipe-view__header
-  background-color: $dark-green
-  display: flex
-  align-items: center
-  padding: 0 10px 0 10px
+  @extend .card__header
 
 .recipe-view__name
-  font-family: $lato
-  font-size: 2rem
+  @extend .card__title
   margin-right: 10px
 
 .recipe-view__edit-name

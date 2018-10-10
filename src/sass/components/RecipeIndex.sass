@@ -1,7 +1,3 @@
-@import "./colors"
-@import "./button"
-$lato: lato, sans-serif
-  
 .recipe-index
   color: white
   background-color: $dark-green
@@ -9,6 +5,9 @@ $lato: lato, sans-serif
   grid-template-rows: 5rem 1fr 5rem
   justify-items: center
   align-items: center
+
+.recipe-index__title
+  @extend .card__title
 
 .recipe-index__list
   background-color: white

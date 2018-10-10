@@ -1,7 +1,7 @@
 import React from 'react';
 import RecipeViewListItem from "./RecipeViewListItem";
 import RecipeViewAddItem from "./RecipeViewAddItem";
-import DEFAULT_RECIPES from '../defaultRecipes';
+import DEFAULT_RECIPES from '../defaultRecipes.json';
 
 export default class RecipeViewContents extends React.Component {
   constructor(props) {

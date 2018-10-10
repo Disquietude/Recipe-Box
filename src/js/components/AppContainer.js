@@ -1,5 +1,5 @@
 import React from "react";
-import DEFAULT_RECIPES from "./defaultRecipes";
+import DEFAULT_RECIPES from "./defaultRecipes.json";
 import RecipeIndex from "./RecipeIndex/RecipeIndex";
 import RecipeView from "./RecipeView/RecipeView";
 import Modal from "./Modal/Modal";

@@ -1,5 +1,3 @@
-@import "./colors"
-  
 .modal
   position: fixed
   z-index: 1
@@ -10,9 +8,21 @@
   background-color: rgba(0,0,0,0.6)
 
 .modal__contents
+  @extend .card
   width: 50%
   height: 50%
-  border: 15px solid $dark-green
-  border-radius: 15px
   margin: 10rem auto
+  grid-template-rows: 5rem 1fr 5rem
   background-color: white
+
+.modal__header
+  @extend .card__header
+  justify-content: space-between
+  & h1 
+    @extend .card__title
+  & button 
+    @extend .button--no-border
+    color: $light-green
+
+.modal__body
+  @extend .card__body
