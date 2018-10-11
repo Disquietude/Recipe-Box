@@ -14,6 +14,8 @@
   margin: 10rem auto
   grid-template-rows: 5rem 1fr 5rem
   background-color: white
+  border-top: none
+  border-bottom: none
 
 .modal__header
   @extend .card__header
@@ -26,3 +28,29 @@
 
 .modal__body
   @extend .card__body
+
+.modal__footer
+  @extend .card__footer
+  justify-content: flex-end
+
+.modal__footer-button
+  @extend .button--no-border
+  padding: 0.5rem 0 0.5rem 0
+  width: 120px
+  margin-left: 10px
+  font-family: $lato
+  font-size: 1.5rem
+  color: white
+  border-radius: 5px
+  &:hover
+    color: $grey
+
+.modal__footer-button--confirm
+  background-color: $blue
+  &:hover
+    background-color: $dark-blue
+
+.modal__footer-button--cancel
+  background-color: $red
+  &:hover
+    background-color: $dark-red
