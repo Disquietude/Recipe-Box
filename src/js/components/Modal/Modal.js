@@ -4,16 +4,25 @@ import ModalBody from './ModalBody';
 import ModalFooter from './ModalFooter';
 
 import { connect } from 'react-redux';
-import { openModal, closeModal } from '../../actions/modalActions';
+import { closeModal } from '../../actions/modalActions';
 
-export default class Modal extends React.Component {
+class Modal extends React.Component {
   render() {
+    let display = {
+      display: this.props.modalState.display
+    };
     return (
-      <div className="modal">
+      <div className="modal" style={display}>
         <div className="modal__contents">
-          <ModalHeader />
+          <ModalHeader
+            purpose={this.props.modalState.purpose}
+            category={this.props.modalState.category}
+            closeModal={this.props.closeModal} 
+          />
           <ModalBody />
-          <ModalFooter />
+          <ModalFooter 
+            closeModal={this.props.closeModal}
+          />
         </div>
       </div>
     );
@@ -25,7 +34,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  closeModal: () => dispatch(closeModal()),
-  openModal: (payload) => dispatch(openModal(payload))
+  closeModal: () => dispatch(closeModal())
 })
 
+export default connect(mapStateToProps, mapDispatchToProps)(Modal);
