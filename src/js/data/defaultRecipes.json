@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Classic Philadelphia Cheesecake",
+    "ingredients": [
+      "1 3/4 cups Honey Maid graham cracker crumbs",
+      "1/3 cup butter, melted",
+      "1 1/4 cups sugar, divided",
+      "3 (8 ounce) packages Philadelphia Cream Cheese, softened",
+      "1 cup Breakstone's or Knudsen Sour Cream",
+      "2 teaspoons vanilla",
+      "3 eggs",
+      "1 (21 ounce) can cherry pie filling"
+    ],
+    "directions": [
+      "Heat oven to 350° F.",
+      "Mix graham crumbs, butter and 1/4 cup sugar; press onto bottom of 9-inch springform pan.",
+      "Beat cream cheese and remaining sugar in large bowl with mixer until blended.",
+      "Add sour cream and vanilla; mix well.",
+      "Add eggs, one at a time, beating on low speed after each addition just until blended.",
+      "Pour over crust.",
+      "Bake 1 hour to 1 hour 10 minutes or until center is almost set.",
+      "Run knife around rim of pan to loosen cake.",
+      "Cool before removing rim.",
+      "Refrigerate cheesecake 4 hours.",
+      "Top with pie filling before serving."
+    ]
+  },
+  {
+    "name": "Polish Cream Cheese Coffee Cake",
+    "ingredients": [
+      "1 cup white sugar",
+      "1/2 cup butter",
+      "1 egg",
+      "1 cup sour cream",
+      "1 teaspoon vanilla extract",
+      "3 cups all-purpose flour",
+      "1 teaspoon baking soda",
+      "1 teaspoon baking powder",
+      "2 (8 ounce) packages cream cheese, softened",
+      "1/2 cup white sugar",
+      "1 egg",
+      "1/2 cup chopped pecans",
+      "1/2 cup brown sugar",
+      "1/3 cup all-purpose flour",
+      "1/3 cup butter"
+    ],
+    "directions":[
+      "Preheat oven to 350 degrees F (175 degrees C). Grease a 9x13-inch baking dish.",
+      "Beat 1 cup white sugar, 1/2 cup butter, and 1 egg in a bowl until smooth. Add sour cream and vanilla extract; mix well. Stir in 3 cups flour, baking soda, and baking powder until mixture comes together in a sticky dough. Spread half the dough evenly into prepared baking dish.",
+      "Beat cream cheese, 1/2 cup white sugar, and 1 egg in another bowl until smooth. Spoon mixture into baking dish over dough. Drop remaining half of dough by spoonfuls over cream cheese mixture.",
+      "Mix pecans, brown sugar, 1/3 cup flour, and 1/3 cup butter in a bowl until mixture resembles a coarse crumble; sprinkle over dough.",
+      "Bake in the preheated oven until a toothpick inserted into the center comes out clean, about 45 minutes."
+    ]
+  },
+  {
+    "name": "Zwetschgendatschi (German Plum Sheet Cake)",
+    "ingredients":[
+      "4 3/4 cups all-purpose flour",
+      "4 teaspoons baking powder",
+      "1 cup white sugar",
+      "2 teaspoons vanilla sugar",
+      "2 pinches salt",
+      "1 1/3 cups unsalted butter, room temperature and cut into chunks",
+      "2 eggs",
+      "2 1/4 pounds Italian prune plums, halved and pitted",
+      "2 tablespoons white sugar",
+      "1 teaspoon ground cinnamon",
+      "2 tablespoons unsalted butter, room temperature and cut into chunks",
+      "1 tablespoon sliced almonds (optional)"
+    ],
+    "directions":[
+      "Combine flour and baking powder in a large bowl. Mix in 1 cup sugar, vanilla sugar, and salt. Add 1 1/3 cups butter and eggs. Knead everything into a smooth dough. Shape dough into a ball, press flat, cover, and chill in the refrigerator 1 hour to overnight.",
+      "Preheat the oven to 350 degrees F (175 degrees C). Grease a baking sheet with butter.",
+      "Cut halved plums in half again, without cutting all the way through, so they fan out.",
+      "Roll pastry dough out on a lightly floured work surface. Line the bottom and sides of the prepared baking sheet with dough. Mix 2 tablespoons sugar and cinnamon together in a bowl.",
+      "Arrange plums side by side on the pastry dough; very small plums should overlap. Dot plums with 2 tablespoons butter and sprinkle with cinnamon sugar and almonds.",
+      "Bake in the preheated oven until pastry crust is lightly browned, 30 to 40 minutes. Remove from oven. Allow plum cake to cool, then cut into squares. Serve lukewarm or at room temperature."
+    ]
+  }
+]

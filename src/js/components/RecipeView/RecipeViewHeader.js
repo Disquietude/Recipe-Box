@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import DEFAULT_RECIPES from "../defaultRecipes.json";
+import DEFAULT_RECIPES from "../../data/defaultRecipes.json";
 
 export default class RecipeViewHeader extends React.Component {
   constructor(props) {

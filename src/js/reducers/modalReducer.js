@@ -8,7 +8,7 @@ const initialState = {
 };
 
 let modalReducer = (state = initialState, action) => {
-  switch(action.type){
+  switch(action.type) {
     case CLOSE_MODAL:
       return {
         ...state,
