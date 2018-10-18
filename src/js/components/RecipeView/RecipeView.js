@@ -10,14 +10,19 @@ class RecipeView extends React.Component {
     super(props);
   }
   render() {
+    let currentRecipe = this.props.recipes[this.props.selectedRecipe];
     return (
       <div className="recipe-view">
         <div className="recipe-view__card">
           <RecipeViewHeader
-            openModal={this.props.openModal} 
+            openModal={this.props.openModal}
+            recipeName={currentRecipe.name} 
+            recipeIndex={this.props.selectedRecipe}
           />
           <RecipeViewContents
             openModal={this.props.openModal}
+            currentRecipe={currentRecipe}
+            recipeIndex={this.props.selectedRecipe}
           />
         </div>
       </div>
@@ -26,7 +31,8 @@ class RecipeView extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  modalState: state.modal
+  recipes: state.recipes,
+  selectedRecipe: state.selectedRecipe
 })
 
 const mapDispatchToProps = dispatch => ({

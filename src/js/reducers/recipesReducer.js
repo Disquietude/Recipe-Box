@@ -1,8 +1,6 @@
 import defaultRecipes from '../data/defaultRecipes.json';
 
-const initialState = defaultRecipes;
-
-let recipesReducer = (state = initialState, action) => {
+let recipesReducer = (state = defaultRecipes, action) => {
   switch(action.type) {
     default:
       return state;

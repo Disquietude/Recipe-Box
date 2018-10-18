@@ -4,7 +4,8 @@ const initialState = {
   display: "none",
   purpose: null,
   category: null,
-  index: null
+  index: null,
+  input: ""
 };
 
 let modalReducer = (state = initialState, action) => {
@@ -15,7 +16,8 @@ let modalReducer = (state = initialState, action) => {
         display: "none",
         purpose: null,
         category: null,
-        index: null
+        index: null,
+        input: ""
       };
     case OPEN_MODAL:
       return {

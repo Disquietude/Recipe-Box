@@ -1,25 +1,31 @@
 import React from "react";
 
-const recipeNames = [
-  "Polish Cream Cheese Coffee Cake",
-  "Banana Cake VI",
-  "White Chocolate Raspberry",
-  "Zwetschgendatschi (German Plum Sheet Cake)"
-];
-
 export default class RecipeIndexList extends React.Component {
   constructor(props) {
     super(props);
+    this.onClick = this.onClick.bind(this);
   }
+
+  onClick(index) {
+    this.props.selectRecipe(index);
+  }
+
   render() {
-    const list = recipeNames.map((current, index) => {
+    const list = this.props.recipes.map((current, index) => {
+      let classes = "recipe-index__list-item";
+      if (index == this.props.selectedRecipe) {
+        classes += " recipe-index__list-item--selected";
+      }
       return (
         <li 
           key={index}
-          className="recipe-index__list-item"> {current} </li>
+          className={classes}
+          onClick={(e) => this.onClick(index, e)}
+        > 
+          {current.name} 
+        </li>
       );
     });
-    console.log(list);
     return (
       <div className="recipe-index__list">
         <ul>

@@ -1,15 +1,14 @@
 import React from 'react';
 import RecipeViewListItem from "./RecipeViewListItem";
 import RecipeViewAddItem from "./RecipeViewAddItem";
-import DEFAULT_RECIPES from '../../data/defaultRecipes.json';
 
 export default class RecipeViewContents extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
-    const ingredients = DEFAULT_RECIPES[0].ingredients.map(createList("ingredients"));;
-    const directions = DEFAULT_RECIPES[0].directions.map(createList("directions"));
+    const ingredients = this.props.currentRecipe.ingredients.map(createList("ingredients", this.props.openModal));
+    const directions = this.props.currentRecipe.directions.map(createList("directions", this.props.openModal));
     return (
       <div className="recipe-view__contents">
         <h2 className="recipe-view__contents-header">Ingredients:</h2>
@@ -27,13 +26,15 @@ export default class RecipeViewContents extends React.Component {
   }
 }
 
-let createList = (type) => {
+let createList = (category, openModal) => {
   return (current, index) => {
     return (
       <li className="recipe-view__list-item" key={index}>
           <RecipeViewListItem 
-            type={type}
+            content={current}
+            category={category}
             index={index}
+            openModal={openModal}
           />
       </li>
     );

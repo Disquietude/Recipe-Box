@@ -43,23 +43,23 @@
   list-style-type: decimal
 
 .recipe-view__list-item
-  margin-top: 0.5rem
+  padding: 0.25rem 0 0.25rem 0
 
 .recipe-view__list-item-contents
   margin-left: 10px
-  display: flex
-  & p 
-    margin-right: 5px
+  line-height: 1.3
 
 .recipe-view__list-item-button
   @extend .button--no-border
   color: $grey
+  &:first-child
+    margin-left: 5px
 
 .recipe-view__add-list-item-button
   @extend .button--no-border
   display: flex
   align-items: center
-  margin: 0.5rem 0 2rem 9px
+  margin: 0.25rem 0 2rem 9px
   font-size: 1.2rem
   font-family: $lato
   color: $green
