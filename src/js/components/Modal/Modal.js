@@ -30,7 +30,9 @@ class Modal extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  modalState: state.modal
+  modalState: state.modal,
+  recipes: state.recipes,
+  selectedRecipe: state.selectedRecipe
 })
 
 const mapDispatchToProps = dispatch => ({

@@ -20,7 +20,6 @@ class RecipeIndex extends React.Component {
           selectRecipe={this.props.selectRecipe}
         />
         <RecipeIndexControls 
-          selectedRecipe={this.props.selectedRecipe}
           openModal={this.props.openModal}
         />
       </div>

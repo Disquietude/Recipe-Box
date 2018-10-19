@@ -17,12 +17,10 @@ class RecipeView extends React.Component {
           <RecipeViewHeader
             openModal={this.props.openModal}
             recipeName={currentRecipe.name} 
-            recipeIndex={this.props.selectedRecipe}
           />
           <RecipeViewContents
             openModal={this.props.openModal}
             currentRecipe={currentRecipe}
-            recipeIndex={this.props.selectedRecipe}
           />
         </div>
       </div>
