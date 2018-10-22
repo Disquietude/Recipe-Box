@@ -10,7 +10,8 @@ export default class RecipeViewHeader extends React.Component {
   onClick() {
     let payload = {
       purpose: "edit",
-      category: "recipes"
+      category: "recipes",
+      input: this.props.recipeName
     };
 
     this.props.openModal(payload);

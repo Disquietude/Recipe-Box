@@ -11,7 +11,8 @@ export default class RecipeViewListItem extends React.Component {
     let payload = {
       purpose: purpose,
       category: this.props.category,
-      index: this.props.index
+      index: this.props.index,
+      input: this.props.content
     };
 
     this.props.openModal(payload);

@@ -1,4 +1,4 @@
-import { OPEN_MODAL, CLOSE_MODAL } from '../actions/types';
+import { OPEN_MODAL, CLOSE_MODAL, CHANGE_INPUT } from '../actions/types';
 
 const initialState = {
   display: "none",
@@ -25,6 +25,11 @@ let modalReducer = (state = initialState, action) => {
         display: "block",
         ...action.payload
       };
+    case CHANGE_INPUT:
+      return {
+        ...state,
+        input: action.input
+      }
     default:
       return state;
   }

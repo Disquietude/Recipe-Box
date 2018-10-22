@@ -4,7 +4,7 @@ import ModalBody from './ModalBody';
 import ModalFooter from './ModalFooter';
 
 import { connect } from 'react-redux';
-import { closeModal } from '../../actions/modalActions';
+import { closeModal, changeInput } from '../../actions/modalActions';
 
 class Modal extends React.Component {
   render() {
@@ -19,8 +19,15 @@ class Modal extends React.Component {
             category={this.props.modalState.category}
             closeModal={this.props.closeModal} 
           />
-          <ModalBody />
+          <ModalBody 
+            modalState={this.props.modalState}
+            recipes={this.props.recipes}
+            selectedRecipe={this.props.selectedRecipe}
+            changeInput={this.props.changeInput}
+          />
           <ModalFooter 
+            modalState={this.props.modalState}
+            selectedRecipe={this.props.selectedRecipe}
             closeModal={this.props.closeModal}
           />
         </div>
@@ -36,7 +43,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  closeModal: () => dispatch(closeModal())
+  closeModal: () => dispatch(closeModal()),
+  changeInput: (input) => dispatch(changeInput(input))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Modal);

@@ -10,9 +10,8 @@
 .modal__contents
   @extend .card
   width: 50%
-  height: 50%
   margin: 10rem auto
-  grid-template-rows: 5rem 1fr 5rem
+  grid-template-rows: 5rem 10rem 5rem
   background-color: white
   border-top: none
   border-bottom: none
@@ -28,6 +27,17 @@
 
 .modal__body
   @extend .card__body
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  font-size: 1.5rem
+
+.modal__body-input
+  margin: 1rem 0 1rem 0
+  font-size: 1.5rem
+  height: 80%
+  width: 90%
 
 .modal__footer
   @extend .card__footer
