@@ -10,17 +10,18 @@ class RecipeView extends React.Component {
     super(props);
   }
   render() {
-    let currentRecipe = this.props.recipes[this.props.selectedRecipe];
     return (
       <div className="recipe-view">
         <div className="recipe-view__card">
           <RecipeViewHeader
-            openModal={this.props.openModal}
-            recipeName={currentRecipe.name} 
+            recipes={this.props.recipes}
+            selectedRecipe={this.props.selectedRecipe}
+            openModal={this.props.openModal} 
           />
           <RecipeViewContents
+            recipes={this.props.recipes}
+            selectedRecipe={this.props.selectedRecipe}
             openModal={this.props.openModal}
-            currentRecipe={currentRecipe}
           />
         </div>
       </div>
