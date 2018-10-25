@@ -8,7 +8,11 @@ import { closeModal, changeInput } from '../../actions/modalActions';
 import { selectRecipe } from '../../actions/selectRecipe';
 import {
   addRecipe,
-  deleteRecipe
+  deleteRecipe,
+  editRecipeName,
+  addRecipeItem,
+  deleteRecipeItem,
+  editRecipeItem
 } from '../../actions/recipeActions';
 
 class Modal extends React.Component {
@@ -38,6 +42,10 @@ class Modal extends React.Component {
             closeModal={this.props.closeModal}
             addRecipe={this.props.addRecipe}
             deleteRecipe={this.props.deleteRecipe}
+            editRecipeName={this.props.editRecipeName}
+            addRecipeItem={this.props.addRecipeItem}
+            deleteRecipeItem={this.props.deleteRecipeItem}
+            editRecipeItem={this.props.editRecipeItem}
           />
         </div>
       </div>
@@ -56,7 +64,11 @@ const mapDispatchToProps = dispatch => ({
   changeInput: (input) => dispatch(changeInput(input)),
   selectRecipe: (index) => dispatch(selectRecipe(index)),
   addRecipe: (name) => dispatch(addRecipe(name)),
-  deleteRecipe: (index) => dispatch(deleteRecipe(index))
+  deleteRecipe: (index) => dispatch(deleteRecipe(index)),
+  editRecipeName: (payload) => dispatch(editRecipeName(payload)),
+  addRecipeItem: (payload) => dispatch(addRecipeItem(payload)),
+  deleteRecipeItem: (payload) => dispatch(deleteRecipeItem(payload)),
+  editRecipeItem: (payload) => dispatch(editRecipeItem(payload))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Modal);

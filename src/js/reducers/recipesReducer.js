@@ -23,6 +23,18 @@ let recipesReducer = (state = defaultRecipes, action) => {
       case DELETE_RECIPE:
         draft.splice(action.index, 1);
         break;
+      case EDIT_RECIPE_NAME:
+        draft[action.payload.index].name = action.payload.input;
+        break;
+      case ADD_RECIPE_ITEM:
+        draft[action.payload.recipeIndex][action.payload.category].push(action.payload.input);
+        break;
+      case DELETE_RECIPE_ITEM:
+        draft[action.payload.recipeIndex][action.payload.category].splice(action.payload.itemIndex, 1);
+        break;
+      case EDIT_RECIPE_ITEM:
+        draft[action.payload.recipeIndex][action.payload.category][action.payload.itemIndex] = action.payload.input;
+        break;
     }
   });
 };

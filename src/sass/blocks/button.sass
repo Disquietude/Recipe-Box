@@ -12,3 +12,11 @@
   @extend .button
   border: none
   outline: none
+
+.button--disabled
+  @extend .button
+  opacity: 0.6
+  &:hover
+    cursor: not-allowed
+  &:active
+    transform: none
