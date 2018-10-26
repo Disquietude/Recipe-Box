@@ -7,10 +7,12 @@ import {
   EDIT_RECIPE_ITEM
 } from '../actions/types';
 import produce from 'immer';
-import defaultRecipes from '../data/defaultRecipes.json';
+import { setRecipes, getRecipes } from '../data/localStorageManager';
 
-let recipesReducer = (state = defaultRecipes, action) => {
-  return produce(state, (draft) => {
+let initialState = getRecipes();
+
+let recipesReducer = (state = initialState, action) => {
+  let newState = produce(state, (draft) => {
     switch(action.type) {
       case ADD_RECIPE:
         let newRecipe = {
@@ -37,6 +39,8 @@ let recipesReducer = (state = defaultRecipes, action) => {
         break;
     }
   });
+  setRecipes(newState);
+  return newState;
 };
 
 export default recipesReducer;
