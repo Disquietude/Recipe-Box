@@ -1,4 +1,5 @@
 import React from 'react';
+import defaultRecipes from '../../data/defaultRecipes.json';
 
 export default class ModalFooter extends React.Component {
   constructor(props){
@@ -60,6 +61,11 @@ export default class ModalFooter extends React.Component {
           };
           this.props.editRecipeItem(payload);
         }
+        break;
+      case "reset":
+        this.props.resetRecipes(defaultRecipes);
+        this.props.selectRecipe(0);
+        break;
     }
     this.props.closeModal();
   }
@@ -72,7 +78,7 @@ export default class ModalFooter extends React.Component {
       children: "Confirm"
     };
 
-    if (this.props.modalState.purpose != "delete") {
+    if (this.props.modalState.purpose == "add" || this.props.modalState.purpose == "edit") {
       confirmButtonProps.children = "Save";
 
       //Prevent saving by disabling button if input is empty

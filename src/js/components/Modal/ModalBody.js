@@ -11,7 +11,7 @@ export default class ModalBody extends React.Component {
   }
 
   render() {
-    let message = "", displayInput = {display: "none"};
+    let message, displayInput = {display: "none"};
     switch(this.props.modalState.purpose) {
       case "add":
         switch(this.props.modalState.category) {
@@ -28,18 +28,29 @@ export default class ModalBody extends React.Component {
         displayInput = {display: "block"}
         break;
       case "delete":
-        message = "Are you sure you want to delete '";
+        let itemContent;
         switch(this.props.modalState.category) {
           case "recipes":
-            message += this.props.recipes[this.props.selectedRecipe].name;
+            itemContent = this.props.recipes[this.props.selectedRecipe].name;
             break;
           default:
-            message += this.props.recipes[this.props.selectedRecipe][this.props.modalState.category][this.props.modalState.index];
+            itemContent = this.props.recipes[this.props.selectedRecipe][this.props.modalState.category][this.props.modalState.index];
         }
-        message += "'?";
+        message = (
+          <React.Fragment>
+            {"Are you sure you want to delete "} 
+            <span style={{fontWeight: "bold"}}>
+              "{itemContent}"
+            </span>
+            ?
+          </React.Fragment>
+        );
         break;
       case "edit":
         displayInput = {display: "block"}
+        break;
+      case "reset":
+        message = "Reset to default recipes?";
         break;
     }
     return (

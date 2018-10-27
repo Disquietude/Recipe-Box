@@ -4,7 +4,8 @@ import {
   EDIT_RECIPE_NAME,
   ADD_RECIPE_ITEM,
   DELETE_RECIPE_ITEM,
-  EDIT_RECIPE_ITEM
+  EDIT_RECIPE_ITEM,
+  RESET_RECIPES
 } from '../actions/types';
 import produce from 'immer';
 import { setRecipes, getRecipes } from '../data/localStorageManager';
@@ -37,6 +38,8 @@ let recipesReducer = (state = initialState, action) => {
       case EDIT_RECIPE_ITEM:
         draft[action.payload.recipeIndex][action.payload.category][action.payload.itemIndex] = action.payload.input;
         break;
+      case RESET_RECIPES:
+        return action.defaultRecipes;
     }
   });
   setRecipes(newState);

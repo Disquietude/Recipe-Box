@@ -40,6 +40,13 @@ export default class RecipeIndexControls extends React.Component {
         >
           <FontAwesomeIcon icon="trash" size="2x" className="recipe-index__button-icon"/>
         </button>
+        <button 
+          className="recipe-index__button" 
+          title="Reset recipes"
+          onClick={(e) => this.onClick("reset", e)}
+        >
+          <FontAwesomeIcon icon="undo" size="2x" className="recipe-index__button-icon"/>
+        </button>
       </div>
     );
   }

@@ -12,7 +12,8 @@ import {
   editRecipeName,
   addRecipeItem,
   deleteRecipeItem,
-  editRecipeItem
+  editRecipeItem,
+  resetRecipes
 } from '../../actions/recipeActions';
 
 class Modal extends React.Component {
@@ -46,6 +47,7 @@ class Modal extends React.Component {
             addRecipeItem={this.props.addRecipeItem}
             deleteRecipeItem={this.props.deleteRecipeItem}
             editRecipeItem={this.props.editRecipeItem}
+            resetRecipes={this.props.resetRecipes}
           />
         </div>
       </div>
@@ -68,7 +70,8 @@ const mapDispatchToProps = dispatch => ({
   editRecipeName: (payload) => dispatch(editRecipeName(payload)),
   addRecipeItem: (payload) => dispatch(addRecipeItem(payload)),
   deleteRecipeItem: (payload) => dispatch(deleteRecipeItem(payload)),
-  editRecipeItem: (payload) => dispatch(editRecipeItem(payload))
+  editRecipeItem: (payload) => dispatch(editRecipeItem(payload)),
+  resetRecipes: (defaultRecipes) => dispatch(resetRecipes(defaultRecipes))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Modal);

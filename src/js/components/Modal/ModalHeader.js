@@ -18,6 +18,8 @@ export default class ModalHeader extends React.Component {
       case "delete":
         title += "Delete ";
         break;
+      case "reset":
+        title += "Reset ";
     }
 
     switch(this.props.category) {
@@ -25,6 +27,9 @@ export default class ModalHeader extends React.Component {
         title += "Recipe";
         if (this.props.purpose == "edit") {
           title += " Name";
+        }
+        else if (this.props.purpose == "reset") {
+          title += "s";
         }
         break;
       case "ingredients":
